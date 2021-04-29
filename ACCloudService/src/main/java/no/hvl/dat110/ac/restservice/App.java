@@ -52,7 +52,7 @@ public class App {
 			Gson gson = new Gson();
 			AccessMessage message = gson.fromJson(reg.body(), AccessMessage.class);
 			int id = accesslog.add(message.getMessage());
-			return id;
+			return gson.toJson(accesslog.get(id));
 		});
 
 		// should return a JSON-representation of all access log entries in the system,
