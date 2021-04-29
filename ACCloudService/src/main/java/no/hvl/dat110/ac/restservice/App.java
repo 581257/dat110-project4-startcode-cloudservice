@@ -95,10 +95,9 @@ public class App {
 		// JSON-representation of the empty access log in the body of the HTTP response.
 
 		delete("/accessdevice/log", (reg, res) -> {
-			Gson gson = new Gson();
+		
 			accesslog.clear();
-			//accesslog = new AccessLog();
-			return gson.toJson(accesslog);
+			return accesslog.toJson();
 
 		});
 	}
