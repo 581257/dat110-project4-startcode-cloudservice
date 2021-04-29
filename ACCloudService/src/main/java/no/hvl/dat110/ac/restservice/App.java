@@ -97,7 +97,7 @@ public class App {
 		delete("/accessdevice/log", (reg, res) -> {
 			Gson gson = new Gson();
 			accesslog.clear();
-			accesslog = new AccessLog();
+			//accesslog = new AccessLog();
 			return gson.toJson(accesslog);
 
 		});
